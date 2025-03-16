@@ -9,4 +9,19 @@ export class UserService {
   create(obj) {
     return this.userModel.create(obj);
   }
+  getAllItem() {
+    return this.userModel.find();
+  }
+
+  getById(id) {
+    return this.userModel.findById(id);
+  }
+
+  deleteById(id) {
+    return this.userModel.findByIdAndDelete(id);
+  }
+
+  putById(id, obj) {
+    return this.userModel.findByIdAndUpdate(id, obj);
+  }
 }
